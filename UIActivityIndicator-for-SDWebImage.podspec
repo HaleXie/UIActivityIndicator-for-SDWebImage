@@ -6,9 +6,11 @@ Pod::Spec.new do |s|
   s.homepage      = "https://github.com/JJSaccolo/UIActivityIndicator-for-SDWebImage"
   s.license       = { :type => 'MIT License', :file => 'LICENSE.txt' }
   s.author        = { "Giacomo Saccardo" => "gsaccardo@gmail.com" }
-  s.source        = { :git => "https://github.com/JJSaccolo/UIActivityIndicator-for-SDWebImage.git", :tag => "1.2" }
-  s.platform      = :ios, '5.0'
+  s.source        = { :git => 'ssh://git@github.com/HaleXie/UIActivityIndicator-for-SDWebImage.git', :branch => 'visionOS' }
+  s.platform         = :ios
+  s.ios.deployment_target      = '14.0'
+  s.visionos.deployment_target = '2.0'
   s.source_files  = '*.{h,m}'
   s.requires_arc  = true
-  s.dependency 'SDWebImage', '~> 3.7'
+  s.dependency 'SDWebImage', '5.20.0'
 end
