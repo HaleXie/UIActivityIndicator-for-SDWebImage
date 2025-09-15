@@ -16,12 +16,14 @@ let package = Package(
         ),
     ],
     dependencies: [
-        .package(url: "git@github.com:SDWebImage/SDWebImage.git", from: "5.0.0")
+        .package(url: "git@github.com:SDWebImage/SDWebImage.git", from: "5.21.2")
     ],
     targets: [
         .target(
             name: "UIActivityIndicator-for-SDWebImage",
-            dependencies: ["SDWebImage"],
+            dependencies: [
+                .product(name: "SDWebImage", package: "SDWebImage"),
+            ],
             path: ".",
             sources: [
                 "UIImageView+UIActivityIndicatorForSDWebImage.m"
